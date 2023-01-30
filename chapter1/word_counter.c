@@ -22,6 +22,6 @@ main() {
 			++nw;
 		}
 	}
-	printf("number of lines:%d number of words:%d number of characters:%d\n", nl, nw, nc);
+	printf("number of lines: %d number of words: %d number of characters: %d\n", nl, nw, nc);
 	
 }

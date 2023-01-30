@@ -5,15 +5,21 @@
 
 int main()
 {
-	int c, state;
+	int c, state, rep;
+
+	rep = 0;
 
 	while((c = getchar()) != EOF) {
 		if (c == ' ' || c == '\n' || c == '\t') {
+			if (rep == 0)
+				putchar('\n');
 			state = OUT;
-			putchar('\n');
+			rep += 1;
+
 		} else {
 			state = IN;
-			putchar(c);	
+			putchar(c);
+			rep = 0;	
 		}
 	}
 }
